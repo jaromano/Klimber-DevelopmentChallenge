@@ -1,4 +1,5 @@
 ﻿using System;
+using NUnit.Framework;
 using System.Collections.Generic;
 using DevelopmentChallenge.Data.Refactorizacion.Enums;
 using DevelopmentChallenge.Data.Refactorizacion.Factories;
@@ -6,7 +7,7 @@ using DevelopmentChallenge.Data.Refactorizacion.Interfaces;
 using DevelopmentChallenge.Data.Refactorizacion.Models;
 using DevelopmentChallenge.Data.Refactorizacion.Services;
 using DevelopmentChallenge.Data.Refactorizacion.Services.Idiomas;
-using NUnit.Framework;
+
 
 namespace DevelopmentChallenge.Data.Tests.Refactorizacion
 {
@@ -59,12 +60,6 @@ namespace DevelopmentChallenge.Data.Tests.Refactorizacion
             var rectangulo = new Rectangulo(lado, alto);
             Assert.That(rectangulo.CalcularPerimetro(), Is.EqualTo(perimetroEsperado));
         }
-
-
-
-
-
-
 
 
         [TestCase(5, 10.825)]
@@ -162,7 +157,7 @@ namespace DevelopmentChallenge.Data.Tests.Refactorizacion
             var formas = new List<FormaGeometrica>
             {
                 new FormaGeometrica(1, 5),  // Cuadrado
-                new FormaGeometrica(2, 4),  // Triángulo
+                new FormaGeometrica(2, 4),  // Triangulo
                 new FormaGeometrica(3, 3),  // Círculo
                 new FormaGeometrica(4, 6),  // Trapecio
                 new FormaGeometrica(5, 2)   // Rectangulo
